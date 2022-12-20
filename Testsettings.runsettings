@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- File name extension must be .runsettings -->
+<RunSettings>
+	<DataCollectionRunSettings>
+		<DataCollectors>
+			<DataCollector friendlyName="Code Coverage" uri="datacollector://Microsoft/CodeCoverage/2.0" assemblyQualifiedName="Microsoft.VisualStudio.Coverage.DynamicCoverageDataCollector, Microsoft.VisualStudio.TraceCollector, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+				<Configuration>
+					<CodeCoverage>
+						<!-- Match assembly file paths: -->
+						<ModulePaths>
+							<Include>
+								<!--<ModulePath>.*\.exe$</ModulePath>-->
+							</Include>
+							<Exclude>
+								<ModulePath>.*unittests.dll$</ModulePath>
+								<ModulePath>.*unittest.dll$</ModulePath>
+								<ModulePath>.*CDS.CRM.Plugins.Test.dll$</ModulePath>
+								<ModulePath>.*CDS.CRM.Common.dll$</ModulePath>
+							</Exclude>
+						</ModulePaths>
+						<Attributes>
+							<Exclude>
+								<Attribute>^System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute$</Attribute>
+							</Exclude>
+						</Attributes>
+						<Sources>
+							<Include>
+								<!--<ModulePath>.*\.exe$</ModulePath>-->
+							</Include>
+							<Exclude>	
+								<Source>.*PostOperationAccountStatus_Create.cs$</Source>
+								<Source>.*PreOperation_Account_Associate.cs$</Source>
+								<Source>.*PreOperation_Account_Delete.cs$</Source>
+								<Source>.*PreOperation_Account_Disassociate.cs$</Source>
+								<Source>.*PostOperation_Contact_CloneRecord.cs$</Source>
+								<Source>.*PostOperation_contact_SharedVariabled.cs$</Source>
+								<Source>.*PostOperationContactActivities.cs$</Source>								
+								<Source>.*PreOperation_Contact_SecureandUnSecure.cs$</Source>
+								<Source>.*PostOperation_CreateEmail_SalesAttachment.cs$</Source>
+								<Source>.*PostOperation_Lead_CreateEmailWithAttachment.cs$</Source>
+								<Source>.*PostOperation_Email_Create.cs$</Source>
+								<Source>.*PostOperation_Opportunity_CloneRecord.cs$</Source>
+								<Source>.*PreOperationOpportunity_AutoNumber.cs$</Source>
+								<Source>.*PostOperation_Contact_OnChange_Priority.cs$</Source>
+								<Source>.*PostOperation_Contact_OnChange_Revenue.cs$</Source>
+								<Source>.*PostOperation_ContactSave_Update_Estimated Revenue.cs$</Source>
+								<Source>.*PostOperation_Update_OnChange_RoleType.cs$</Source>
+								<Source>.*PostOpertaion_OnCreate_Settlement_Create_SettlementParty.cs$</Source>
+								<Source>.*PostOperation_SettlementParty_AssignRecord.cs$</Source>
+							</Exclude>
+						</Sources>
+
+						<!-- We recommend you do not change the following values: -->
+						<UseVerifiableInstrumentation>True</UseVerifiableInstrumentation>
+						<AllowLowIntegrityProcesses>True</AllowLowIntegrityProcesses>
+						<CollectFromChildProcesses>True</CollectFromChildProcesses>
+						<CollectAspDotNet>False</CollectAspDotNet>
+
+					</CodeCoverage>
+				</Configuration>
+			</DataCollector>
+		</DataCollectors>
+	</DataCollectionRunSettings>
+</RunSettings>
